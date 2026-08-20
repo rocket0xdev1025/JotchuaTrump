@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jotchua Trump | $JotchuaTrump</title>
+  <meta name="description" content="Jotchua Trump is here to meme, pump, and send the timeline into absolute chaos." />
+  <meta property="og:title" content="Jotchua Trump | $JotchuaTrump" />
+  <meta property="og:description" content="Jotchua Trump is here to meme, pump, and send the timeline into absolute chaos." />
+  <meta property="og:image" content="banner.jpg" />
+  <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            glory: {
+              red: "#BF0A30",
+              crimson: "#8E0C24",
+              blue: "#002868",
+              navy: "#06122B",
+              ink: "#030914",
+              gold: "#D4AF37",
+              champagne: "#F3E2A7",
+              ivory: "#F6F1E7",
+            },
+          },
+          fontFamily: {
+            display: ["Bebas Neue", "Impact", "sans-serif"],
+            cinzel: ["Cinzel", "Times New Roman", "serif"],
+            body: ["DM Sans", "system-ui", "sans-serif"],
+          },
+          boxShadow: {
+            gold: "0 0 0 1px #D4AF37, 0 0 24px rgba(212,175,55,0.28)",
+            podium: "0 18px 50px rgba(0,0,0,0.45)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --red: #bf0a30;
+      --blue: #002868;
+      --gold: #d4af37;
+    }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: #030914;
+      color: #f6f1e7;
+    }
+
+    .bg-house {
+      background-image:
+        linear-gradient(180deg, rgba(3, 9, 20, 0.55) 0%, rgba(6, 18, 43, 0.72) 45%, rgba(3, 9, 20, 0.88) 100%),
+        url("whitehouse.jpg");
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    .flag-stripes {
+      background: repeating-linear-gradient(
+        180deg,
+        #bf0a30 0 7px,
+        #f6f1e7 7px 14px
+      );
+    }
+
+    .star-field {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #fff;
+      animation: twinkle 2.8s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; transform: scale(0.7); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    .gold-frame {
+      position: relative;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      box-shadow:
+        inset 0 0 0 1px rgba(246, 241, 231, 0.08),
+        0 0 0 1px rgba(0, 40, 104, 0.6),
+        0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .gold-frame::before,
+    .gold-frame::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--gold);
+      pointer-events: none;
+    }
+
+    .gold-frame::before {
+      top: -2px;
+      left: -2px;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .gold-frame::after {
+      bottom: -2px;
+      right: -2px;
+      border-left: 0;
+      border-top: 0;
+    }
+
+    .seal {
+      border-radius: 9999px;
+      border: 3px solid #d4af37;
+      box-shadow:
+        0 0 0 4px #002868,
+        0 0 0 7px #d4af37,
+        0 0 40px rgba(212, 175, 55, 0.45);
+    }
+
+    .shimmer {
+      background: linear-gradient(90deg, #8e0c24, #bf0a30, #e23a4d, #bf0a30, #8e0c24);
+      background-size: 200% 100%;
+      animation: sheen 2.8s linear infinite;
+    }
+
+    @keyframes sheen {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .ticker-track {
+      animation: ticker 28s linear infinite;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .hero-wash {
+      background:
+        linear-gradient(180deg, rgba(3, 9, 20, 0.15) 0%, rgba(3, 9, 20, 0.35) 42%, rgba(3, 9, 20, 0.92) 100%),
+        url("banner.jpg");
+      background-size: cover;
+      background-position: center 30%;
+    }
+
+    .step-line {
+      background: linear-gradient(90deg, transparent, #d4af37, #bf0a30, #d4af37, transparent);
+    }
+
+    .copy-flash {
+      animation: pop 0.35s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.92); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .nav-blur {
+      background: linear-gradient(180deg, rgba(6, 18, 43, 0.92), rgba(6, 18, 43, 0.78));
+      backdrop-filter: blur(16px);
+    }
+
+    .canton {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18) 0 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.16) 0 1px, transparent 2px),
+        #002868;
+      background-size: 28px 28px, 36px 36px, auto;
+    }
+
+    @media (max-width: 768px) {
+      .bg-house {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body class="bg-house font-body antialiased">
+  <div class="star-field" id="stars" aria-hidden="true"></div>
+
+  <div class="relative z-20">
+    <div class="flag-stripes h-2 w-full"></div>
+    <div class="h-[6px] w-full bg-glory-blue"></div>
+    <div class="h-[3px] w-full bg-glory-gold"></div>
+
+    <header class="nav-blur sticky top-0 z-50 border-b border-glory-gold/30">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.png" alt="Jotchua Trump logo" class="seal h-12 w-12 object-cover md:h-14 md:w-14" />
+          <div class="leading-none">
+            <p class="font-cinzel text-[10px] tracking-[0.28em] text-glory-gold">THE PEOPLE'S MEME</p>
+            <p class="font-display text-2xl tracking-wide text-glory-ivory md:text-3xl">JOTCHUA TRUMP</p>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 font-cinzel text-xs tracking-[0.22em] text-glory-ivory/90 lg:flex">
+          <a href="#about" class="transition hover:text-glory-gold">ABOUT</a>
+          <a href="#howtobuy" class="transition hover:text-glory-gold">HOW TO BUY</a>
+          <a href="#chart" class="transition hover:text-glory-gold">CHART</a>
+          <a href="#community" class="transition hover:text-glory-gold">CABINET</a>
+        </nav>
+
+        <div class="flex items-center gap-2 md:gap-3">
+          <a href="https://t.me/JotchuaTrumpSol" target="_blank" rel="noopener noreferrer" class="hidden sm:block" aria-label="Telegram">
+            <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ring-2 ring-glory-gold/70 transition hover:ring-glory-ivory" />
+          </a>
+          <a href="https://x.com/JotchuaTrump" target="_blank" rel="noopener noreferrer" class="hidden sm:block" aria-label="X / Twitter">
+            <img src="x.png" alt="X / Twitter" class="h-9 w-9 rounded-full ring-2 ring-glory-gold/70 transition hover:ring-glory-ivory" />
+          </a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="shimmer hidden rounded-sm px-4 py-2 font-display text-lg tracking-wider text-white shadow-gold sm:inline-block">
+            BUY NOW
+          </a>
+          <button id="menuBtn" class="rounded-sm border border-glory-gold/60 p-2 lg:hidden" aria-label="Open menu">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden border-t border-glory-gold/20 bg-glory-navy/95 lg:hidden">
+        <div class="flex flex-col gap-4 px-6 py-5 font-cinzel text-sm tracking-[0.2em]">
+          <a href="#about" class="hover:text-glory-gold">ABOUT</a>
+          <a href="#howtobuy" class="hover:text-glory-gold">HOW TO BUY</a>
+          <a href="#chart" class="hover:text-glory-gold">CHART</a>
+          <a href="#community" class="hover:text-glory-gold">CABINET</a>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://t.me/JotchuaTrumpSol" target="_blank" rel="noopener noreferrer">
+              <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ring-2 ring-glory-gold/70" />
+            </a>
+            <a href="https://x.com/JotchuaTrump" target="_blank" rel="noopener noreferrer">
+              <img src="x.png" alt="X / Twitter" class="h-9 w-9 rounded-full ring-2 ring-glory-gold/70" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-wash relative min-h-[92vh] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-glory-ink/50 to-transparent"></div>
+        <div class="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-24 md:px-6 md:pb-20">
+          <div class="max-w-4xl">
+            <div class="mb-5 inline-flex items-center gap-2 border border-glory-gold/50 bg-glory-blue/50 px-3 py-1 font-cinzel text-[10px] tracking-[0.32em] text-glory-gold backdrop-blur-sm md:text-xs">
+              <span class="h-1.5 w-1.5 rounded-full bg-glory-red"></span>
+              LIVE FROM THE SOUTH LAWN
+            </div>
+            <h1 class="font-display text-6xl leading-[0.85] tracking-wide text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.65)] sm:text-8xl md:text-[9rem]">
+              JOTCHUA<br />TRUMP
+            </h1>
+            <p class="mt-2 font-cinzel text-xl text-glory-gold md:text-3xl">$JotchuaTrump</p>
+            <p class="mt-5 max-w-2xl text-base italic text-glory-ivory/90 md:text-xl">
+              “Jotchua Trump is here to meme, pump, and send the timeline into absolute chaos.”
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <button id="copyCa" type="button" class="gold-frame group flex items-center gap-3 bg-glory-navy/80 px-4 py-3 text-left backdrop-blur-md">
+                <span class="font-cinzel text-[10px] tracking-[0.28em] text-glory-gold">CA</span>
+                <span id="caText" class="font-mono text-sm text-glory-ivory md:text-base">TBA</span>
+                <span class="rounded-sm border border-glory-gold/40 px-2 py-0.5 font-display text-sm tracking-wider text-glory-gold group-hover:bg-glory-gold group-hover:text-glory-navy">COPY</span>
+              </button>
+
+              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="shimmer px-8 py-3 text-center font-display text-2xl tracking-[0.14em] text-white shadow-gold">
+                BUY NOW
+              </a>
+              <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="border border-glory-gold bg-glory-blue/70 px-8 py-3 text-center font-display text-2xl tracking-[0.14em] text-glory-ivory backdrop-blur-sm transition hover:bg-glory-blue">
+                CHART
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="overflow-hidden border-y border-glory-gold/40 bg-glory-red">
+        <div class="ticker-track flex w-max gap-10 whitespace-nowrap py-2.5 font-display text-xl tracking-[0.18em] text-white">
+          <span>★ $JotchuaTrump ★ MEME ★ PUMP ★ CHAOS ★ SOLANA ★ FIRST DOG OF THE CHAIN ★ MAKE MEMES GREAT AGAIN ★ SOUTH LAWN SZN ★</span>
+          <span>★ $JotchuaTrump ★ MEME ★ PUMP ★ CHAOS ★ SOLANA ★ FIRST DOG OF THE CHAIN ★ MAKE MEMES GREAT AGAIN ★ SOUTH LAWN SZN ★</span>
+        </div>
+      </div>
+
+      <section id="about" class="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28">
+        <div class="grid items-center gap-10 lg:grid-cols-12">
+          <div class="relative lg:col-span-5">
+            <div class="canton absolute -left-4 -top-4 h-28 w-28 border border-glory-gold/40 md:h-36 md:w-36"></div>
+            <img src="logo.png" alt="Jotchua Trump, first dog of the timeline" class="seal relative z-10 mx-auto w-64 object-cover md:w-80" />
+            <p class="mt-6 text-center font-cinzel text-xs tracking-[0.35em] text-glory-gold">COMMANDER IN MEME</p>
+          </div>
+          <div class="gold-frame bg-glory-navy/75 p-7 backdrop-blur-md lg:col-span-7 md:p-10">
+            <p class="font-cinzel text-xs tracking-[0.32em] text-glory-red">EXECUTIVE BRIEFING</p>
+            <h2 class="mt-3 font-display text-5xl tracking-wide text-white md:text-6xl">THE JOTCHUA ADMINISTRATION</h2>
+            <p class="mt-5 text-base leading-relaxed text-glory-ivory/85 md:text-lg">
+              Born on the South Lawn. Raised in the replies. <strong class="text-glory-gold">Jotchua Trump</strong>
+              (<span class="text-white">$JotchuaTrump</span>) is the golden-haired pup who walked into the White House of crypto
+              and refused to leave. No white papers. No mercy. Just vibes, volume, and a haircut that prints.
+            </p>
+            <p class="mt-4 text-base leading-relaxed text-glory-ivory/85 md:text-lg">
+              Jotchua Trump is here to meme, pump, and send the timeline into absolute chaos. This is a Solana campaign —
+              a rally on-chain, a press conference in your wallet, and a mandate from the trenches.
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div class="border border-glory-gold/30 bg-glory-blue/40 p-3 text-center">
+                <p class="font-cinzel text-[10px] tracking-[0.2em] text-glory-gold">NAME</p>
+                <p class="mt-1 font-display text-xl">Jotchua Trump</p>
+              </div>
+              <div class="border border-glory-gold/30 bg-glory-blue/40 p-3 text-center">
+                <p class="font-cinzel text-[10px] tracking-[0.2em] text-glory-gold">TICKER</p>
+                <p class="mt-1 font-display text-xl">$JotchuaTrump</p>
+              </div>
+              <div class="border border-glory-gold/30 bg-glory-blue/40 p-3 text-center">
+                <p class="font-cinzel text-[10px] tracking-[0.2em] text-glory-gold">CHAIN</p>
+                <p class="mt-1 font-display text-xl">Solana</p>
+              </div>
+              <div class="border border-glory-gold/30 bg-glory-blue/40 p-3 text-center">
+                <p class="font-cinzel text-[10px] tracking-[0.2em] text-glory-gold">STATUS</p>
+                <p class="mt-1 font-display text-xl">SENDING</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="howtobuy" class="relative px-4 py-8 md:px-6 md:py-12">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 text-center">
+            <p class="font-cinzel text-xs tracking-[0.4em] text-glory-gold">PATH TO THE OVAL OFFICE</p>
+            <h2 class="mt-3 font-display text-5xl tracking-wide text-white md:text-7xl">HOW TO BUY</h2>
+            <p class="mx-auto mt-3 max-w-xl text-glory-ivory/75">Four official steps to acquire $JotchuaTrump on Solana. No committees. No filibuster. Just send it.</p>
+            <div class="step-line mx-auto mt-6 h-[2px] w-40"></div>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="gold-frame bg-glory-navy/80 p-6 backdrop-blur-md">
+              <div class="mb-5 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center bg-glory-red font-display text-3xl text-white">01</span>
+                <span class="font-cinzel text-[10px] tracking-[0.25em] text-glory-gold">WALLET</span>
+              </div>
+              <h3 class="font-display text-3xl tracking-wide">SECURE THE WALLET</h3>
+              <p class="mt-3 text-sm leading-relaxed text-glory-ivory/80">
+                Download <strong>Phantom</strong> or <strong>Solflare</strong>. Create a Solana wallet and back up your seed phrase. This is your Oval Office — nobody enters without it.
+              </p>
+            </article>
+
+            <article class="gold-frame bg-glory-navy/80 p-6 backdrop-blur-md">
+              <div class="mb-5 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center bg-glory-blue font-display text-3xl text-white ring-1 ring-glory-gold/50">02</span>
+                <span class="font-cinzel text-[10px] tracking-[0.25em] text-glory-gold">TREASURY</span>
+              </div>
+              <h3 class="font-display text-3xl tracking-wide">FUND WITH SOL</h3>
+              <p class="mt-3 text-sm leading-relaxed text-glory-ivory/80">
+                Buy <strong>SOL</strong> on Coinbase, Binance, Kraken, or any major exchange. Withdraw it to your Solana wallet address. Every campaign needs a war chest.
+              </p>
+            </article>
+
+            <article class="gold-frame bg-glory-navy/80 p-6 backdrop-blur-md">
+              <div class="mb-5 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center bg-glory-red font-display text-3xl text-white">03</span>
+                <span class="font-cinzel text-[10px] tracking-[0.25em] text-glory-gold">SWAP</span>
+              </div>
+              <h3 class="font-display text-3xl tracking-wide">OPEN THE DESK</h3>
+              <p class="mt-3 text-sm leading-relaxed text-glory-ivory/80">
+                Hit <strong>Buy Now</strong> to open pump.fun with SOL already selected. Paste the $JotchuaTrump contract if asked. Copy CA from this site so you never buy the wrong pup.
+              </p>
+            </article>
+
+            <article class="gold-frame bg-glory-navy/80 p-6 backdrop-blur-md">
+              <div class="mb-5 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center bg-glory-blue font-display text-3xl text-white ring-1 ring-glory-gold/50">04</span>
+                <span class="font-cinzel text-[10px] tracking-[0.25em] text-glory-gold">MANDATE</span>
+              </div>
+              <h3 class="font-display text-3xl tracking-wide">SWAP &amp; SEND IT</h3>
+              <p class="mt-3 text-sm leading-relaxed text-glory-ivory/80">
+                Swap SOL for <strong>$JotchuaTrump</strong>, confirm the transaction, and hold. You’re in the administration now. The timeline won’t know what hit it.
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="shimmer w-full px-10 py-4 text-center font-display text-3xl tracking-[0.16em] text-white shadow-gold sm:w-auto">
+              BUY $JotchuaTrump
+            </a>
+            <button type="button" id="copyCa2" class="w-full border border-glory-gold bg-glory-navy/70 px-10 py-4 font-display text-3xl tracking-[0.16em] text-glory-gold backdrop-blur-sm hover:bg-glory-blue/60 sm:w-auto">
+              COPY CA
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="chart" class="relative mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+        <div class="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="font-cinzel text-xs tracking-[0.35em] text-glory-gold">SITUATION ROOM</p>
+            <h2 class="mt-2 font-display text-5xl tracking-wide text-white md:text-6xl">LIVE CHART</h2>
+          </div>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="border border-glory-gold/70 px-5 py-2 font-display text-xl tracking-wider text-glory-ivory hover:bg-glory-blue">
+            OPEN DEXSCREENER
+          </a>
+        </div>
+        <div class="gold-frame overflow-hidden bg-glory-ink">
+          <div class="flex items-center justify-between border-b border-glory-gold/30 bg-glory-blue/60 px-4 py-2">
+            <span class="font-cinzel text-[10px] tracking-[0.28em] text-glory-gold">DEXSCREENER // SOLANA // $JotchuaTrump</span>
+            <span class="h-2 w-2 rounded-full bg-glory-red shadow-[0_0_8px_#BF0A30]"></span>
+          </div>
+          <div class="h-[520px] w-full bg-glory-ink md:h-[640px]">
+            <iframe
+              title="Dexscreener chart for $JotchuaTrump"
+              src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+              class="h-full w-full border-0"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="relative px-4 pb-20 md:px-6 md:pb-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="gold-frame overflow-hidden bg-glory-navy/80 backdrop-blur-md">
+            <div class="grid md:grid-cols-2">
+              <div class="canton relative min-h-[280px] p-8 md:p-12">
+                <p class="font-cinzel text-xs tracking-[0.35em] text-glory-gold">JOIN THE CABINET</p>
+                <h2 class="mt-3 font-display text-5xl tracking-wide text-white md:text-6xl">THE PEOPLE WANT CHAOS</h2>
+                <p class="mt-4 max-w-md text-glory-ivory/80">
+                  Rally on Telegram. Brief the timeline on X. Jotchua Trump does not take questions from the press — only bags.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a href="https://t.me/JotchuaTrumpSol" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 border border-glory-gold/50 bg-glory-navy/50 px-4 py-3 hover:border-glory-gold">
+                    <img src="tg.png" alt="" class="h-10 w-10 rounded-full" />
+                    <span class="font-display text-2xl tracking-wider">TELEGRAM</span>
+                  </a>
+                  <a href="https://x.com/JotchuaTrump" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 border border-glory-gold/50 bg-glory-navy/50 px-4 py-3 hover:border-glory-gold">
+                    <img src="x.png" alt="" class="h-10 w-10 rounded-full" />
+                    <span class="font-display text-2xl tracking-wider">TWITTER / X</span>
+                  </a>
+                </div>
+              </div>
+              <div class="relative min-h-[280px] overflow-hidden">
+                <img src="banner.jpg" alt="Jotchua Trump on the White House lawn" class="h-full w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent to-glory-navy/40 md:bg-gradient-to-l"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-glory-gold/30 bg-glory-ink/90">
+      <div class="flag-stripes h-1.5 w-full"></div>
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row md:px-6">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="" class="seal h-12 w-12 object-cover" />
+          <div>
+            <p class="font-display text-2xl tracking-wide">JOTCHUA TRUMP</p>
+            <p class="font-cinzel text-[10px] tracking-[0.28em] text-glory-gold">$JotchuaTrump · SOLANA</p>
+          </div>
+        </div>
+        <p class="max-w-md text-center text-xs text-glory-ivory/55 md:text-right">
+          $JotchuaTrump is a meme coin with no intrinsic value or expectation of financial return.
+          This website is for entertainment. Not financial advice. Not affiliated with any government, campaign, or person.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://t.me/JotchuaTrumpSol" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full ring-1 ring-glory-gold/50" />
+          </a>
+          <a href="https://x.com/JotchuaTrump" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+            <img src="x.png" alt="X" class="h-9 w-9 rounded-full ring-1 ring-glory-gold/50" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[80] hidden -translate-x-1/2 border border-glory-gold bg-glory-navy px-5 py-3 font-display text-xl tracking-wider text-glory-gold shadow-gold copy-flash">
+    CA COPIED — SEND IT
+  </div>
+
+  <script>
+    const CA = "TBA";
+    const stars = document.getElementById("stars");
+    for (let i = 0; i < 70; i++) {
+      const s = document.createElement("div");
+      s.className = "star";
+      s.style.left = Math.random() * 100 + "%";
+      s.style.top = Math.random() * 100 + "%";
+      s.style.animationDelay = Math.random() * 3 + "s";
+      s.style.opacity = String(0.2 + Math.random() * 0.8);
+      stars.appendChild(s);
+    }
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    mobileMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+
+    function copyCA() {
+      const done = () => {
+        const toast = document.getElementById("toast");
+        toast.classList.remove("hidden");
+        toast.classList.add("copy-flash");
+        setTimeout(() => toast.classList.add("hidden"), 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(CA).then(done).catch(() => fallbackCopy(done));
+      } else {
+        fallbackCopy(done);
+      }
+    }
+
+    function fallbackCopy(done) {
+      const el = document.createElement("textarea");
+      el.value = CA;
+      document.body.appendChild(el);
+      el.select();
+      try { document.execCommand("copy"); done(); } catch (e) {}
+      document.body.removeChild(el);
+    }
+
+    document.getElementById("copyCa").addEventListener("click", copyCA);
+    document.getElementById("copyCa2").addEventListener("click", copyCA);
+  </script>
+</body>
+</html>
